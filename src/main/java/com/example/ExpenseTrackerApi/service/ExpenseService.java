@@ -25,7 +25,7 @@ public class ExpenseService {
         User user  = userRepo.findById(expense.getUser().getUser_id()).get();
 
         if(user == null){
-            throw new IllegalStateException("User doest exist /provid vaild User");
+            throw new IllegalStateException("User doest exist /provid vaild User..");
         }
 
         expense.setUser(user);
