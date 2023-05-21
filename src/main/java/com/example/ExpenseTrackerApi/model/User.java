@@ -20,7 +20,6 @@ public class User {
     private Integer user_id;
 
     @NotEmpty
-    @NotNull
     private String user_name;
 
     @Email

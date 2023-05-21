@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SignUpInput {
-    @NotEmpty
-    @NotNull
+
     private String userName;
 
     @Email

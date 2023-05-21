@@ -18,13 +18,12 @@ public class Expense {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer expenseId ;
 
-    @NotEmpty
+
     private String title ;
 
-    @NotEmpty
     private String description;
 
-    @NotEmpty
+
     private Double price;
     private LocalDate date;
 
