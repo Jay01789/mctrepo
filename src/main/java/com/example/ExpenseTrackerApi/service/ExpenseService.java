@@ -91,6 +91,6 @@ public class ExpenseService {
     public String deleteById(Integer expenseId) {
 
         expenseRepo.deleteById(expenseId);
-        return  "Product Delete Scussesfully" ;
+        return  "Product Delete Scussesfully.." ;
     }
 }
