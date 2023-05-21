@@ -62,7 +62,7 @@ public class UserService {
 
 
         AuthenticationToken token =authenticationTokenService.getToken(user);
-        return new SignInOutput("Sign In Scussesfull",token.getToken() );
+        return new SignInOutput("Sign In Scussesful...l",token.getToken() );
 
     }
 
