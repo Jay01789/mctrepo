@@ -1,6 +1,10 @@
 package com.example.ExpenseTrackerApi.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,7 +18,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer user_id;
+
+    @NotEmpty
+    @NotNull
     private String user_name;
+
+    @Email
     private String userEmail;
     private String user_password;
 

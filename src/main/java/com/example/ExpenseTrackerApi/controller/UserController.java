@@ -5,6 +5,7 @@ import com.example.ExpenseTrackerApi.dto.SignInOutput;
 import com.example.ExpenseTrackerApi.dto.SignUpInput;
 import com.example.ExpenseTrackerApi.dto.SignUpOutput;
 import com.example.ExpenseTrackerApi.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class UserController {
     //Regestering or Signing Up User
 
     @PostMapping(value = "/signup")
-    public SignUpOutput signup(@RequestBody SignUpInput signUpInput){
+    public SignUpOutput signup(@Valid @RequestBody SignUpInput signUpInput){
         return userService.signup(signUpInput);
     }
 
@@ -28,4 +29,5 @@ public class UserController {
     public SignInOutput signin(@RequestBody SignInInput signInInput){
         return userService.signin(signInInput);
     }
+
 }

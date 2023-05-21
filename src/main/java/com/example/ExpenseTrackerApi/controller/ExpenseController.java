@@ -2,6 +2,7 @@ package com.example.ExpenseTrackerApi.controller;
 
 import com.example.ExpenseTrackerApi.model.Expense;
 import com.example.ExpenseTrackerApi.service.ExpenseService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ public class ExpenseController {
 
     // Adding Expenses
     @PostMapping(value = "/add")
-    public void addExpense(@RequestBody Expense expense)
+    public void addExpense(@Valid @RequestBody Expense expense)
     {
         expenseService.addExpense(expense);
     }
@@ -61,4 +62,6 @@ public class ExpenseController {
     {
       return   expenseService.deleteById(expenseId);
     }
+
+
 }

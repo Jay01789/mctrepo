@@ -1,6 +1,7 @@
 package com.example.ExpenseTrackerApi.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,8 +17,14 @@ public class Expense {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer expenseId ;
+
+    @NotEmpty
     private String title ;
+
+    @NotEmpty
     private String description;
+
+    @NotEmpty
     private Double price;
     private LocalDate date;
 
