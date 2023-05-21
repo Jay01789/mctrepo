@@ -12,7 +12,6 @@ import java.time.YearMonth;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/expense")
 public class ExpenseController {
 
     @Autowired
