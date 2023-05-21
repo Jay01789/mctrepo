@@ -19,12 +19,15 @@ public class Expense {
     private Integer expenseId ;
 
 
+    @Column(nullable = false)
     private String title ;
-
+    @Column(nullable = false)
     private String description;
 
-
+    @Column(nullable = false)
     private Double price;
+
+    @Column(nullable = false)
     private LocalDate date;
 
 

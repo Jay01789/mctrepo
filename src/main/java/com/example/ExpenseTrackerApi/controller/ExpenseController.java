@@ -21,7 +21,7 @@ public class ExpenseController {
 
     // Adding Expenses
     @PostMapping(value = "/add")
-    public void addExpense(@Valid @RequestBody Expense expense)
+    public void addExpense( @RequestBody Expense expense)
     {
         expenseService.addExpense(expense);
     }
